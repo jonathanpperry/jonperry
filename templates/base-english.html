@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title> Jon Perry's Website </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="static/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link rel="shortcut icon" href="static/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-material/0.11.4/angular-material.css"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-material/0.11.4/angular-material.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/2.3.1/css/flag-icon.min.css" rel="stylesheet"/>
+
+    </style>
+    {% block head %}
+    {% endblock %}
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+  </head>
+  <body>
+    <nav id="myNavbar" class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
+    <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Jonathan Perry</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="nav navbar-nav navbar-right">
+              <li class="active"><a href="/" target="_self">Home</a></li>
+              <li><a href="projects" target ="_self">Projects</a></li>
+              <li class="flag-icon flag-icon-jp"></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="jumbotron">
+        <h1>Jon Perry's Website</h1>
+        <h3 id="para1">Hello World!</h3>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-1">
+        </div>
+        <div class="col-xs-4">
+          <img src="/static/profilepic.jpg">
+          <script>
+            $('#my-link').click(function(e)
+            {
+              e.preventDefault();
+            });
+          </script>
+        </div>
+        <div class="col-xs-6">
+          <div class="bootstrap-demo">
+            <div class="panel panel-default">
+              <div class="panel-body">
+                <h2>About Me:</h2>
+              </div>
+              <div class="panel-footer">
+                I am an engineer from Michigan, USA. I love 
+                I'm a graduate of the University of Michigan College of Engineering, with a degree in Computer Science 
+                and Engineering. Some of the classes I have taken include:<br>
+                Database Management Systems (EECS 484)<br>
+                Introduction to Artificial Intelligence (EECS 492) <br>
+                User Interface Development (EECS 493) <br>
+                Introduction to Computer Security (EECS 388)<br>
+                Data Structures and Algorithms (EECS 281)<br>
+                My interests within computer science include user interface development, web development, and database management.
+                My interests outside of school include music and sports. I was a 3-year member of the Michigan Marching Band, I am a brother of Kappa Kappa Psi honorary band fraternity, and I hold a minor in music. I also enjoy playing ping pong, tennis, basketball, billiards,
+                lifting weights, and hacking with new technology.<br>
+                I am currently looking for a software development opportunity in Tokyo, Japan.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-1">
+        </div>
+        <div class="col-xs-10">
+          <div class="panel panel-default">
+            <div class="panel-body" style="text-align: center;">
+              <a href="https://facebook.com/jonnyramen" target="_blank">
+                <i class="fa fa-facebook-square icon-fa" style="margin:auto; font-size: 3em; margin-right: 10px;"></i>
+              </a>
+              <a href="https://linkedin.com/in/jonpperry" target="_blank">
+                <i class="fa fa-linkedin-square icon-fa" style="margin:auto; font-size: 3em; margin-right: 10px;"></i>
+              </a>
+              <a href="https://twitter.com/jon_perry_" target="_blank">
+                <i class="fa fa-twitter-square icon-fa" style="margin:auto; font-size: 3em; margin-right: 10px;"></i>
+              <a href="https://dribbble.com/jonnyramen" target="_blank">
+                <i class="fa fa-dribbble icon-fa" style="margin:auto; font-size: 3em; margin-right: 10px;"></i>
+              </a>
+              <a href="https://www.behance.net/jonnyramen" target="_blank">
+                <i class="fa fa-behance icon-fa" style="margin:auto; font-size: 3em; margin-right: 10px;"></i>
+              </a>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div id="content">{% block content %}{% endblock %}</div>
+    <div id="footer">
+      {% block footer %}
+      {% endblock %}
+    </div>
+  </body>
+</html>

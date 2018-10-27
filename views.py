@@ -15,7 +15,3 @@ def index():
 @app.route('/projects/')
 def projects():
 	return render_template('projects.html')
-	
-@app.route('/base-japanese')
-def base-japanese():
-	return render_template('base-japanese.html');

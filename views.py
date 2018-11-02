@@ -17,5 +17,5 @@ def projects():
 	return render_template('projects.html')
 
 @app.route('/basejapanese/')
-def base-japanese():
+def basejapanese():
 	return render_template('basejapanese.html')

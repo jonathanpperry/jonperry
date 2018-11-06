@@ -7,6 +7,10 @@ h1 {
     font-size: 3em !important;
 }
 
+h2 {
+    text-align: center;
+}
+
 h3 {
     color: red;
     text-align: center;
@@ -21,8 +25,12 @@ p {
 }
 
 .icon-fa {
-    color: black;
-    font-size: 0.9em;
+/*    color: black;
+*/    font-size: 0.9em;
+}
+.icon-fa:hover {
+    font-style: none;
+    background-color: red;
 }
 
 .cart-remove i {

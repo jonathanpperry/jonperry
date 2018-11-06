@@ -16,6 +16,10 @@ def index():
 def projects():
 	return render_template('projects.html')
 
+@app.route('/blog')
+def blog():
+    return render_template('blog.html')
+
 @app.route('/basejapanese/')
 def basejapanese():
 	return render_template('basejapanese.html')

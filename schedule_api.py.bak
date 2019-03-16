@@ -1,4 +1,4 @@
-import http.client
+import httplib
 import base64
 import json
 import time
@@ -25,9 +25,9 @@ def get_auth_token():
     '''
     combined = base64.b64encode(consumer_key + ':' + secret_key)
     try:
-        conn = http.client.HTTPSConnection('api-km.it.umich.edu', context=ssl._create_unverified_context())
+        conn = httplib.HTTPSConnection('api-km.it.umich.edu', context=ssl._create_unverified_context())
     except:
-        conn = http.client.HTTPSConnection('api-km.it.umich.edu')
+        conn = httplib.HTTPSConnection('api-km.it.umich.edu')
     token_head = {
         'Authorization' : 'Basic ' + combined,
         'Content-Type' : 'application/x-www-form-urlencoded'
@@ -58,7 +58,7 @@ def get_data(relative_path):
     Will raise a ScheduleApiError if unsuccessful.
     Assumes API will return JSON, returns as a dictionary.
     '''
-    conn = http.client.HTTPConnection(base_url)
+    conn = httplib.HTTPConnection(base_url)
     conn.request(method='GET', url=relative_path, headers=get_headers())
     r = conn.getresponse()
 
